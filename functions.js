@@ -28,8 +28,9 @@ const result = addTwoNumbers(3,4)
 
 // console.log("Result:", result);
 
-function loginUserMessage(username){
-    if(username === undefined){
+function loginUserMessage(username){ // we can put a default value as (username = "raam")
+    if(username === undefined){   //always run when your situation is set to true and i.e. correct, if not passing anything then if is undefined => username = undefined
+        // can be written as if(!username)
             console.log("Please Enter A Username");
             return
     }
@@ -37,4 +38,38 @@ function loginUserMessage(username){
 }
 
 //console.log(loginUserMessage("Mahee Adhikari"))
-console.log(loginUserMessage())    // undefined 
+console.log(loginUserMessage())    // undefined
+
+//shopping cards
+
+function calculateCartPrice(...num1){       //... => rest or spread operator based on its use 
+    // function calculateCartPrice(val1, val2, ...num1) Output: [678]
+    return num1
+}
+
+console.log(calculateCartPrice(90, 400, 678));
+
+const user = {
+    username: "mahee",
+    price: 999
+}
+
+function handleObject(anyobject){
+    console.log(`Username is ${anyobject.username} and price is ${anyobject.price}`)
+}
+
+//handleObject(user)
+handleObject({
+        username: "Raam",
+        price: 299
+})
+
+const myNewArray = [200, 500 , 800 , 1000]
+
+function returnSecondValue(getArray){
+    return getArray[1]
+}
+
+//console.log(returnSecondValue(myNewArray));
+
+console.log(returnSecondValue([200 , 500 , 800 , 1000]))
